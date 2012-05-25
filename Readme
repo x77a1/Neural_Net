@@ -1,0 +1,18 @@
+FILES INCLUDED AND USAGE
+
+Dat.h 		:- GENERATE DATA AND RANDOMIZE TRAINING SET ( MNIST dataset ).
+	The functions are wrapped in a class called Data.
+	Essential Functions:
+	Randomize : It randomizes the dataset for next epoch.
+	getData   : It reads data from the binary files according to the format of MNIST .
+
+	The images given are in gray scale. It is converted to binary by thresholding at 128.
+
+NN.h		:- CONTAIN NN LIBRARY ( BACKPROPAGATION ).
+	The functions are wrapped in a class called NeuralNet.
+	Essential Functions:
+	init 	:  It reads the weights that have been saved from previous training in the log file.
+	NeuralNet :  The backpropagation algorithm is written inside this constructor.The parameters are Number of node in input layer , Number 		   of node in hidden layer , Number of node in output layer , learning rate ( preferably < 0.01 ) and momentum.
+
+Just calling NeuralNet as in GNN.cpp with all the parameters will train the neural net and save the weights in log file.
+
